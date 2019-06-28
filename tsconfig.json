@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "removeComments":true,      //编译生产js文件时是否移除注释
+    "strictNullChecks":true, //  可选参数会被自动地加上 | undefined
+  },
+  "include": [
+    "./src/**/*",
+    "./example/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

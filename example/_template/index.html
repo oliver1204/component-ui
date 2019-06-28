@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>My Component Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script>
+        var InnerWidth = window.innerWidth;
+        var fsz = (InnerWidth / 7.5 * 1).toFixed(2) > 60 ? 60 : (InnerWidth / 7.5 * 1).toFixed(2);
+        document.getElementsByTagName('html')[0].style['font-size'] = fsz + 'px';
+    </script>
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: .3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+  You need to enable JavaScript to run this app.
+  </noscript>
+
+    <div id="root"></div>
+</body>
+
+</html>
