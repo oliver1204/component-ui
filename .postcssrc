@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "postcss-nested": {},
+    "postcss-cssnext": {
+      "browsers": [
+        "last 2 versions",
+        "Android >= 4.3",
+        "iOS >= 7.0"
+      ]
+    },
+    "postcss-flex-fallback": {},
+    "postcss-px2rem": {
+      "remUnit": 75
+    }
+  }
+}
