@@ -4,7 +4,7 @@
 * [ListsTemplate](#ListsTemplate)
 * [LoadMore](#LoadMore)
 * [Model](#Model)
-* [NoDate](#NoDate)
+* [NoData](#NoData)
 * [Sticky](#Sticky)
 * [Switch](#Switch)
 * [Tabs](#Tabs)
@@ -172,20 +172,33 @@ Model.hide();
 
 ```
 
-<h2 id="NoDate">NoDate</h2>
-
 ### explain
 |可选参数  | 方法  | 
 |---|---|
 | src(string), 图片 |   | 
+| main(string), 主要内容（字体为黑色） |   |
+| sub(string), 次要内容（字体为灰色） |   |
 
 ### demo
 
 ```js
 
-import NoDate from '../Components/NoDate/index';
+const {NoData} = require('../Components/component-ui.js');
 
- <NoDate src={require("../images...")}></NoDate>
+ <NoData 
+    main="您已提交试卷，人工阅卷中……"
+    sub="您可等待阅卷结果消息或返回首页关注成绩动态"
+    src={require("./images/empty.png")}></NoData>
+
+``` 
+
+### demo
+
+```js
+
+import NoData from '../Components/NoData/index';
+
+ <NoData src={require("../images...")}></NoData>
 
 ``` 
 
@@ -245,7 +258,7 @@ let tabs = [{
 
 ```js
 
-import Switch from '../Components/NoDate/index';
+import Switch from '../Components/NoData/index';
 
  <Switch 
   onClick={(value) => {
