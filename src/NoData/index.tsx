@@ -20,7 +20,7 @@ class NoDate extends  React.Component<Props> {
                 {
                     mainTips ? <p className="main">{mainTips}</p> : null
                 }
-                <p className="sub">{ subTips }</p>
+                <p className={`sub ${mainTips ? ' fixedWidth' : ''}`}>{ subTips }</p>
             </div>
         );
     }

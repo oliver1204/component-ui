@@ -15,11 +15,13 @@
     .sub {
         font-size: .28rem;
         color: #959595;
-        width: 46%;
         margin: .5rem auto;
     }
     .main {
         font-size: .3rem;
         color: #464646;
+    }
+    .fixedWidth {
+        width: 46%;
     }
 }

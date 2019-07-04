@@ -44,5 +44,8 @@
         .disabled {
             background-color: #A6C5E5;
         }
+        .warning {
+            background-color: #FA8218;
+        }
     }
 }
