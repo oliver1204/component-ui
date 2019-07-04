@@ -9,9 +9,17 @@
 	>p {
 		padding: 0;
 		margin: 0;
-		margin-top: 0.5rem;
-		font-size: 0.28rem;
-		color: #959595;
+		margin-top: .5rem;
 		text-align: center;
-	}	
+	}
+    .sub {
+        font-size: .28rem;
+        color: #959595;
+        width: 46%;
+        margin: .5rem auto;
+    }
+    .main {
+        font-size: .3rem;
+        color: #464646;
+    }
 }

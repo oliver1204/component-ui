@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { NoDate } from '../../src';
+// import { NoData } from '../../src';
 const {  NoData  } = require("../../dist/component-ui.js");
 
 const App = () => {

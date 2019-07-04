@@ -12,10 +12,15 @@ class NoDate extends  React.Component<Props> {
 
     render() {
         let imgsrc = this.props.src || require("./images/empty.png");
+        let mainTips = this.props.main || '';
+        let subTips = this.props.sub || '暂无相关内容';
         return (
             <div className="_NoData">
                 <img src={imgsrc} />
-                <p>暂无相关内容</p>
+                {
+                    mainTips ? <p className="main">{mainTips}</p> : null
+                }
+                <p className="sub">{ subTips }</p>
             </div>
         );
     }

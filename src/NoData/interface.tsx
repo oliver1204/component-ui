@@ -1,3 +1,5 @@
 export interface Props {
-    src?: string
+    src?: string,
+    main?: string,
+    sub?: string
 }
