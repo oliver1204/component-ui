@@ -1,5 +1,5 @@
 export { default as Footer} from './Footer/index';
-export { default as ListsTemplate} from './ListsTemplate/index';
+export { default as Lists} from './Lists/index';
 export { default as LoadMore} from './LoadMore/index';
 export { default as Model} from './Model/index';
 export { default as NoData} from './NoData/index';

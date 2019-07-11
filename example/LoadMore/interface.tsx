@@ -6,7 +6,7 @@ export interface State {
   }
 }
 export interface Props {
-  classN: string,
+  className: string,
   hasLoaderMore: boolean,
   loadMore: () => void,
   LoadMoreParams: any

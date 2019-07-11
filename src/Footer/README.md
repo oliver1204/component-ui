@@ -1,15 +1,15 @@
 ### explain
 
 * required params
-    callback:  是否还有更多内容 
+ 
 
 * optional params
     disabled: boolean --组件设置成灰色，但是方法中自己处理
     className:  string  -- 样式, 
-    type: -- primary(蓝色框白底蓝字), default(蓝底白字)
+    type: -- primary(蓝色框白底蓝字), default(蓝底白字), warning(橙色底白字)
 
 * method
-    callback: function  -- 回调函数
+    onClick: function  -- 回调函数
 
 ### demo
 
@@ -22,10 +22,10 @@ let topicLists =  [1, 3, 4, 6]
 <Footer>
     <Footer.Item
         type="primary"
-        callback={() => {}}></Footer.Item>
+        onClick={() => {}}></Footer.Item>
     <Footer.Item
         callback=""
-        disabled={true}></Footer.Item>  
+        onClick={true}></Footer.Item>  
 </Footer>
 
 ```  

@@ -10,7 +10,7 @@ class Action extends React.Component<Props, State> {
     refActionSheet: any;
     input: HTMLTextAreaElement;
     state: State = {
-        classN: '',
+        className: '',
         status: 'waiting', 
         timeout: null,
         hasLoaderMore: true
@@ -46,16 +46,16 @@ class Action extends React.Component<Props, State> {
             prevState.hasLoaderMore = false;
             prevState.status = 'done';
         }
-        if (nextProps.classN && 'classN' in nextProps) {
-            prevState.classN = nextProps.classN;
+        if (nextProps.className && 'className' in nextProps) {
+            prevState.className = nextProps.className;
         }
         return prevState;     
     }
 
     componentDidMount() {
-        if(!this.props.classN) return
+        if(!this.props.className) return
         this.setState({
-            classN: this.props.classN
+            className: this.props.className
         });
     }
 

@@ -6,9 +6,9 @@ const App = () => {
     <Footer>
         <Footer.Item
             type="primary"
-            callback={() => {}}>确定</Footer.Item>
+            onClick={() => {}}>确定</Footer.Item>
         <Footer.Item
-            callback=""
+            onClick=""
           disabled={true}>取消</Footer.Item>    
       </Footer>
   )

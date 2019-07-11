@@ -1,5 +1,5 @@
 export interface State {
-    classN: string,
+    className: string,
     status: string, 
     timeout: any,
     hasLoaderMore: boolean
@@ -7,7 +7,7 @@ export interface State {
 export interface Props {
     loadMore: any,  // 回调函数
     children?: any,
-    classN?: string,
+    className?: string,
     hasLoaderMore: boolean,
     LoadMoreParams?: any
 }

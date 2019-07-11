@@ -36,7 +36,7 @@ class App extends React.Component<Props, State> {
       <Sticky>
         <Tabs 
           initIndex={this.state.currentIndex} 
-          handleClick={this.choiceTabs}>
+          onClick={this.choiceTabs}>
           {
             this.state.tabs.map((child: any, cindex: number) => {
               return (

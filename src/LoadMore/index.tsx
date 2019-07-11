@@ -16,7 +16,7 @@ class LoadMore extends Action {
     render() {
         let state = this.state;
         return (
-            <div className={state.classN}>
+            <div className={state.className}>
                 {this.props.children}
 
                 <div className="loadMoreFooter">

@@ -54,7 +54,7 @@ class App extends React.Component<Props, State> {
 
     return (
       <LoadMore 
-        classN="topicLists"
+        className="topicLists"
         hasLoaderMore={this.data.hasMoreMap[this.state.currentTab.typeId]} 
         loadMore={this.getTopicLists.bind(this)} 
         LoadMoreParams={this.state.currentTab.typeId}

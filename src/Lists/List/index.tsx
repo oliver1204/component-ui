@@ -13,7 +13,7 @@ class List extends Action {
 
   render() {
     return (
-      <div className='list bottom_1px_line' onClick={this.handleClick.bind(this)}>
+      <div className='list bottom_1px_line' onClick={this.onClick.bind(this)}>
         {this.props.children} 
       </div>
     );
