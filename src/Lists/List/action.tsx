@@ -12,15 +12,15 @@ import {
 //Main
 class Action extends React.Component<Props, State> {
   static defaultProps: Props = {
-    handleClick: null
+    onClick: null
   }
 
   constructor(props: Props) {
     super(props);
 
   }
-  handleClick(params?: any){
-    this.props.handleClick(params);
+  onClick(params?: any){
+    this.props.onClick(params);
   }
   
 }

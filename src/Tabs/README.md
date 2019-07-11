@@ -8,7 +8,7 @@
   tabClass: string   -- tab 的样式， 若填则采用默认样式
 
 * method
-  handleClick: function  -- 点击tab的时候的回调函数
+  onClick: function  -- 点击tab的时候的回调函数
 
 ### demo
 
@@ -33,7 +33,7 @@ function choiceTabs(index: number | string) {
 
 <TabsControl 
   initIndex={this.state.currentIndex} 
-  handleClick={this.choiceTabs.bind(this)}>
+  ={this.choiceTabs.bind(this)}>
   {
     pthis.state.tabs.map((child, cindex) => {
       return (

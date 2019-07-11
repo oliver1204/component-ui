@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { ListsTemplate } from '../../src';
+import { Lists } from '../../src';
 
 const App = () => {
   return (
     <>
       <p>以下是list</p>
-      <ListsTemplate hasMarginTop={"top30"}>
-        <ListsTemplate.List handleClick={() => {}}>
+      <Lists hasMarginTop={"top30"}>
+        <Lists.List onClick={() => {}}>
           <div className="lineH">
             <i className="theme icon"></i>
             <span className="ls">我的话题</span>
@@ -15,9 +15,9 @@ const App = () => {
           <span className="ls">我的话题</span>
             <i></i>
           </div>
-        </ListsTemplate.List>
-        <ListsTemplate.Form></ListsTemplate.Form>
-    </ListsTemplate>   
+        </Lists.List>
+        <Lists.Form></Lists.Form>
+    </Lists>   
     </>
   )
 };

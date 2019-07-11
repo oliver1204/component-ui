@@ -19,7 +19,7 @@ class Action extends React.Component<Props, State> {
 
   static defaultProps: Props = {
     initIndex: 0,
-    handleClick: null
+    onClick: null
   }
 
   constructor(props: Props) {
@@ -49,7 +49,7 @@ class Action extends React.Component<Props, State> {
       currentIndex: pthis.props.initIndex,
       flag: true
     });
-    this.props.handleClick(pthis.props.initIndex);
+    this.props.onClick(pthis.props.initIndex);
   }
 
   componentDidUpdate(props: Props, state: State) {    
@@ -65,8 +65,8 @@ class Action extends React.Component<Props, State> {
   getCurrentItemClasses(index: number){
     return index === this.state.currentIndex ? "tab-content-item active" : "tab-content-item";
   }
-  handleClick(index: number){
-    this.props.handleClick(index);
+  onClick(index: number){
+    this.props.onClick(index);
   }
   
 }

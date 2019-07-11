@@ -5,7 +5,7 @@
  
 
 * method
-    handleClick: function  -- 点击的时候的回调函数
+    onClick: function  -- 点击的时候的回调函数
 
 
 ### demo
@@ -13,11 +13,11 @@
 表单格式的用form
 ```js
 
-import ListsTemplate from '../Components/ListsTemplate/index';
+import Lists from '../Components/ListsTemplate/index';
 
 
-<ListsTemplate hasMarginTop={"top30"}>
-    <ListsTemplate.List handleClick={this.toJump.bind(this, 'postMessage')}>
+<Lists hasMarginTop={"top30"}>
+    <Lists.List onClick={this.toJump.bind(this, 'postMessage')}>
         <div className="lineH">
             <i className="theme icon"></i>
             <span className="ls">我的话题</span>
@@ -28,9 +28,9 @@ import ListsTemplate from '../Components/ListsTemplate/index';
             }
             <i></i>
         </div>
-    </ListsTemplate.List>
-    <ListsTemplate.Form></ListsTemplate.Form>
-</ListsTemplate>   
+    </Lists.List>
+    <Lists.Form></Lists.Form>
+</Lists>   
 
 ```  
 

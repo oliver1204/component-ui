@@ -5,7 +5,7 @@ export interface Props {
     disabled?: boolean,
     type?: string,
     className?: string,
-    callback: any 
+    onClick: any 
 }
 export interface Data {
     

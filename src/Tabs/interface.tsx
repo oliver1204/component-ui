@@ -7,7 +7,7 @@ export interface Props {
   tabsClass?: string,
   tabClass?: string,
   initIndex: number | string,
-  handleClick?: any
+  onClick?: any
 }
 export interface Data {
   

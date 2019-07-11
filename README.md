@@ -1,7 +1,7 @@
 以下是目前总结的组件：
 
 * [Footer](#Footer)
-* [ListsTemplate](#ListsTemplate)
+* [Lists](#Lists)
 * [LoadMore](#LoadMore)
 * [Model](#Model)
 * [NoData](#NoData)
@@ -16,37 +16,37 @@
 
 | 必选参数 | 可选参数  | 方法  | 
 |---|---|---|
-| callback， 是否还有更多内容  |  disabled， boolean --组件设置成灰色，但是方法中自己处理 | callback， 回调函数  | 
+|   |  disabled， boolean --组件设置成灰色，但是方法中自己处理 | onClick， 回调函数  | 
 |   | className（string），样式 |   |
-|   | type（string），primary(蓝色框白底蓝字), default(蓝底白字)  |   | 
+|   | type（string），primary(蓝色框白底蓝字), default(蓝底白字), warning(橙色底白字)  |   | 
 
 
 ### demo
 
 ```js
 
-import { Footer } from '../../Common/main';
+const { Footer } = require('../require('../../Modules/component-ui.js')');
 
 let topicLists =  [1, 3, 4, 6] 
 
 <Footer>
     <Footer.Item
         type="primary"
-        callback={() => {}}></Footer.Item>
+        onClick={() => {}}></Footer.Item>
     <Footer.Item
         callback=""
-        disabled={true}></Footer.Item>  
+        onClick={true}></Footer.Item>  
 </Footer>
 
 ```  
 
 
-<h2 id="ListsTemplate"> ListsTemplate </h2>
+<h2 id="Lists"> Lists </h2>
 
 ### explain
 |可选参数  | 方法  | 
 |---|---|
-| hasMarginTop(string), 是否有空隙， top20, top30不需要自己写，其他样式需要自己写 | handleClick, 点击的时候的回调函数  |
+| hasMarginTop(string), 是否有空隙， top20, top30不需要自己写，其他样式需要自己写 | onClick, 点击的时候的回调函数  |
 
 ### demo
 
@@ -55,11 +55,11 @@ let topicLists =  [1, 3, 4, 6]
 
 ```js
 
-import ListsTemplate from '../Components/ListsTemplate/index';
+const { ListsTemplate } = require('../require('../../Modules/component-ui.js')');
 
 
-<ListsTemplate hasMarginTop={"top30"}>
-    <ListsTemplate.List handleClick={this.toJump.bind(this, 'postMessage')}>
+<Lists hasMarginTop={"top30"}>
+    <Lists.List onClick={this.toJump.bind(this, 'postMessage')}>
         <div className="lineH">
             <i className="theme icon"></i>
             <span className="ls">我的话题</span>
@@ -70,9 +70,9 @@ import ListsTemplate from '../Components/ListsTemplate/index';
             }
             <i></i>
         </div>
-    </ListsTemplate.List>
-    <ListsTemplate.Form></ListsTemplate.Form>
-</ListsTemplate>   
+    </Lists.List>
+    <Lists.Form></Lists.Form>
+</Lists>   
 
 ```  
 
@@ -88,12 +88,12 @@ import ListsTemplate from '../Components/ListsTemplate/index';
 
 ```js
 
-import LoadMore from '../Components/ReactLoadMore/index';
+const { LoadMore } = require('../require('../../Modules/component-ui.js')');
 
 let topicLists =  [1, 3, 4, 6] 
 
 <LoadMore 
-    classN="topicLists"
+    className="topicLists"
     hasLoaderMore={this.data.hasMoreMa} 
     loadMore={this.getTopicLists.bind(this)} 
     LoadMoreParams={this.state.currentTab.typeId}
@@ -124,7 +124,7 @@ let topicLists =  [1, 3, 4, 6]
 ### demo -- Alert
 
 ```js
-import { Model } from '../../Common/main';
+const { Model } = require('../require('../../Modules/component-ui.js')');
 
 Model.show({
   title: 'alert 标题',
@@ -142,7 +142,6 @@ Model.show({
 ### demo -- Confirm
 
 ```js
-import { Model } from '../../Common/main';
 
 Model.show({
   type: 'confirm',
@@ -166,11 +165,12 @@ Model.show({
 ### demo -- 手动关闭弹窗
 
 ```js
-import { Model } from '../../Common/main';
 
 Model.hide();
 
 ```
+
+<h2 id="NoData">NoData</h2>
 
 ### explain
 |可选参数  | 方法  | 
@@ -183,22 +183,12 @@ Model.hide();
 
 ```js
 
-const {NoData} = require('../Components/component-ui.js');
+const { NoData } = require('../require('../../Modules/component-ui.js')');
 
  <NoData 
     main="您已提交试卷，人工阅卷中……"
     sub="您可等待阅卷结果消息或返回首页关注成绩动态"
     src={require("./images/empty.png")}></NoData>
-
-``` 
-
-### demo
-
-```js
-
-import NoData from '../Components/NoData/index';
-
- <NoData src={require("../images...")}></NoData>
 
 ``` 
 
@@ -210,13 +200,10 @@ import NoData from '../Components/NoData/index';
 |  stickyTop（number），tabs 距顶部的距离 |   
 |  zIndex（string），z-index 值 |      
  
-
-
 ### demo
 
 ```js
-
-import ReactSticky from '../Components/ReactSticky/index';
+const { Sticky } = require('../require('../../Modules/component-ui.js')');
 
 let tabs = [{
   index: 0,
@@ -257,8 +244,7 @@ let tabs = [{
 ### demo
 
 ```js
-
-import Switch from '../Components/NoData/index';
+const { Switch } = require('../require('../../Modules/component-ui.js')');
 
  <Switch 
   onClick={(value) => {
@@ -284,14 +270,13 @@ import Switch from '../Components/NoData/index';
 ### explain
 | 必选参数 | 可选参数  | 方法  | 
 |---|---|---|
-| initIndex（number），初始tab  | tabsClass（string）， tab group 的样式  | handleClick， 点击tab的时候的回调函数  | 
+| initIndex（number），初始tab  | tabsClass（string）， tab group 的样式  | onClick， 点击tab的时候的回调函数  | 
 |   | tabClass（string）， tab 的样式， 若填则采用默认样式  |   |
 
 ### demo
 
 ```js
-
-import Tabs from '../Components/ReactTabsControl/index';
+const { Tabs } = require('../require('../../Modules/component-ui.js')');
 
 let tabs = [{
   index: 0,
@@ -310,7 +295,7 @@ function choiceTabs(index: number | string) {
 
 <Tabs
   initIndex={this.state.currentIndex} 
-  handleClick={this.choiceTabs.bind(this)}>
+  onClick={this.choiceTabs.bind(this)}>
   {
     pthis.state.tabs.map((child, cindex) => {
       return (
@@ -335,7 +320,7 @@ function choiceTabs(index: number | string) {
 ### demo
 
 ```js
-import { Toast } from '../../Common/main';
+const { Toast } = require('../require('../../Modules/component-ui.js')');
 // message
 Toast.show({
   message: '一条普通的消息',
@@ -367,10 +352,5 @@ Toast.hide()
 
 ```
 
-### Author
-
-If you encounter any questions, please call me. 
-my mail address is 348560971@qq.com.
-@ziran.liu
 
 

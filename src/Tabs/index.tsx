@@ -23,7 +23,7 @@ class TabsControl extends Action {
             React.Children.map(this.props.children, (children: JSX.Element, index: number) => {
               return (
                 <div className={`tab-title-item ${this.props.tabsClass ? this.props.tabsClass : ''} ${index === this.state.currentIndex ? 'active' : ''}`}>
-                  <div onClick={this.handleClick.bind(this, index)} className={this.props.tabClass ? this.props.tabClass : ''}>{children.props.title}</div>
+                  <div onClick={this.onClick.bind(this, index)} className={this.props.tabClass ? this.props.tabClass : ''}>{children.props.title}</div>
                 </div>
               );
             })
