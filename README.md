@@ -299,7 +299,7 @@ function choiceTabs(index: number | string) {
   {
     pthis.state.tabs.map((child, cindex) => {
       return (
-        <TabsControl.Item title={child.name} key={cindex}></TabsControl.Item>
+        <Tabs.Item title={child.name} key={cindex}></Tabs.Item>
       )
     }) 
   }
